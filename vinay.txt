@@ -1,0 +1,30 @@
+aws s3 sync s3://wildrydes-us-east-1/WebApplication/1_StaticWebHosting/website s3://vinay12 --region us-east-1
+AKIAT2COOOBSCNXWK2JM
+z4qHQ7L0TH3vybRmoMuB56J6MwW85b9/hcqLLrFp
+
+/var/log/nginx/error.log
+/var/log/nginx/access.log
+http://vinay12.s3-website-us-east-1.amazonaws.com/
+sudo yum install -y amazon-efs-utils
+mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport 10.1.1.79:/ /vijay
+{
+  "Version":"2012-10-17",
+  "Statement":[
+    {
+      "Sid":"PublicRead",
+      "Effect":"Allow",
+      "Principal": "*",
+      "Action":["s3:GetObject"],
+      "Resource":"arn:aws:s3:::vinay12/*",
+ "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": [
+            "157.44.91.206/32"
+      
+          ]
+        }
+
+    }
+   }
+  ]
+}

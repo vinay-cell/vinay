@@ -1,0 +1,4 @@
+
+docker-machine -D create --driver amazonec2 --amazonec2-access-key AKIAT2COOOBSMADOKBX4 --amazonec2-secret-key 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 --amazonec2-vpc-id vpc-0d3f9fb4c7e315541 --amazonec2-region us-east-1 --amazonec2-instance-type t2.medium --amazonec2-subnet-id subnet-089f66c8613001309 ammi
+getmac /V /FO CS
+scp -i vinay-key.pem /var/lib/jenkins_home/workspace/vinay/target/way2homeservices.war ubuntu@10.1.4.220:/var/lib/jetty9/webapps
