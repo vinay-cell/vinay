@@ -1,0 +1,13 @@
+pipeline {
+    agent {
+        any
+    }
+    stages {
+        stage('clone code from github')
+            steps {
+                step {
+                    git 'https://github.com/vinay-cell/way2homeservices.git'
+                     }                 
+                  }
+            }
+    }
